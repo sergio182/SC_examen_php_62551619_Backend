@@ -70,7 +70,7 @@ class PrestamosController extends Controller
     {
         // Obtener la lista de préstamos segmentados por mes
         $prestamosPorMes = Prestamos::select(
-            DB::raw('MONTHNAME(fecha_prestamo) as mes'),
+            DB::raw('MONTH(fecha_prestamo) as mes'),
             DB::raw('COUNT(*) as cantidad_prestamos'),
             DB::raw('YEAR(fecha_prestamo) as año'),
             'clientes.name as cliente',
