@@ -13,11 +13,12 @@ class Libro extends Migration
      */
     public function up()
     {
-        Schema::create('libros', function(Blueprint $table) {
+        Schema::create('libros', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->integer('autor_id');
-            $table->string('lote');
+            $table->unsignedBigInteger('autor_id');
+            $table->foreign('autor_id')->references('id')->on('autors');
+            $table->integer('lote');
             $table->text('description');
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
