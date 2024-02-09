@@ -87,4 +87,22 @@ class PrestamosController extends Controller
 
         return response()->json($prestamosPorMes, 200);
     }
+
+
+
+
+    //-----------nuevo prestamo registrar
+    public function crearPrestamo(Request $request)
+    {
+        $datos = $request->only(['libro_id', 'cliente_id', 'fecha_prestamo', 'dias_prestamo', 'estado']);
+        $prestamo = Prestamos::create($datos);
+
+        return response()->json($prestamo, 201);
+    }
+
+
+    public function getPrestamos()
+    {
+        return response()->json(Prestamos::all(), 200);
+    }
 }

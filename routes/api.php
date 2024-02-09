@@ -20,6 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('cliente', 'App\Http\Controllers\ClienteController@getClientes');
+Route::get('autor', 'App\Http\Controllers\AutorController@getAutor');
+Route::get('libro', 'App\Http\Controllers\LibroController@getLibro');
 Route::get('vencidos', 'App\Http\Controllers\PrestamosController@obtenerClientesConLibrosVencidos');
 Route::get('prestamoSemana', 'App\Http\Controllers\PrestamosController@obtenerPrestamosPorSemana');
 Route::get('prestamoMes', 'App\Http\Controllers\PrestamosController@obtenerPrestamosPorMes');
