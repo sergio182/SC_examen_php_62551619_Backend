@@ -1,0 +1,20 @@
+1.-dentreo del directorio raiz
+instalar composer >composer install
+
+2.-despues de clonar el proyecto
+	abrir en un IDE 
+	cambiar el nombre del archivo de la raiz principal( .envPrueva) por (.env)
+	para la connexion 
+3.-En el mismo archivo .env-> ajustar-> el puerto de xampp para la conexion que estar por defecto en 3306
+			      ajustar-> el usuario y contraseña de xampp phpmyadmin
+			      ajustar-> el nombre de la base de datos por defecto esta con el nombre (laravel) 
+
+
+4.- Arrancar xampp -> en php myadmin->crear una base de datos con el nombre (laravel)->sin tablas
+		   -> o tambien inclui en el repositorio la base de datos con el nombre de laravel 
+
+5.- abrir una consola en el directorio raiz del proyecto para migrar las tablas y sus relaciones ejecutar
+	>php artisan migrate
+6.- Acabado la migracion ejecutar para arrancar el servidor 
+	>php artisan serve
+ya estar en ejecucion el backend localmente en el puerto que inicie
