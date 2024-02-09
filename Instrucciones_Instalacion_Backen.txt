@@ -5,7 +5,7 @@ instalar composer >composer install
 	abrir en un IDE 
 	cambiar el nombre del archivo de la raiz principal( .envPrueva) por (.env)
 	para la connexion 
-3.-En el mismo archivo .env-> ajustar-> el puerto de xampp para la conexion que estar por defecto en 3306
+3.-En el mismo archivo .env-> ajustar-> el puerto de xampp para la conexion que estar por defecto en 3307
 			      ajustar-> el usuario y contraseña de xampp phpmyadmin
 			      ajustar-> el nombre de la base de datos por defecto esta con el nombre (laravel) 
 
